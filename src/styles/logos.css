@@ -1,0 +1,52 @@
+.logos {
+  padding: 40px 0 24px;
+  border-top: 1px solid var(--neutral-200);
+  border-bottom: 1px solid var(--neutral-200);
+  background: var(--neutral-50);
+}
+
+.logos-label {
+  text-align: center;
+  font-size: 13px;
+  font-weight: 600;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  color: var(--neutral-400);
+  margin-bottom: 24px;
+}
+
+.logos-row {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: center;
+  gap: 48px;
+}
+
+.logo-item {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  font-weight: 700;
+  font-size: 18px;
+  color: var(--neutral-400);
+  transition: color 0.25s ease;
+}
+
+.logo-item:hover {
+  color: var(--neutral-600);
+}
+
+.logo-item svg {
+  width: 26px;
+  height: 26px;
+}
+
+@media (max-width: 600px) {
+  .logos-row {
+    gap: 28px;
+  }
+  .logo-item {
+    font-size: 15px;
+  }
+}

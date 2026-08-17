@@ -1,0 +1,127 @@
+.safety {
+  background: var(--neutral-0);
+}
+
+.safety-inner {
+  display: grid;
+  grid-template-columns: 1fr 1.1fr;
+  gap: 64px;
+  align-items: center;
+}
+
+.safety-visual {
+  background: linear-gradient(135deg, var(--primary-600), var(--primary-800));
+  border-radius: var(--radius-xl);
+  padding: 40px;
+  color: #fff;
+  position: relative;
+  overflow: hidden;
+}
+
+.safety-visual::before {
+  content: "";
+  position: absolute;
+  top: -60px;
+  right: -60px;
+  width: 220px;
+  height: 220px;
+  background: rgba(255, 255, 255, 0.08);
+  border-radius: 50%;
+}
+
+.safety-visual::after {
+  content: "";
+  position: absolute;
+  bottom: -80px;
+  left: -40px;
+  width: 260px;
+  height: 260px;
+  background: rgba(255, 255, 255, 0.05);
+  border-radius: 50%;
+}
+
+.safety-shield {
+  width: 64px;
+  height: 64px;
+  border-radius: var(--radius-lg);
+  background: rgba(255, 255, 255, 0.15);
+  display: grid;
+  place-items: center;
+  margin-bottom: 24px;
+  position: relative;
+  z-index: 1;
+}
+
+.safety-shield svg {
+  width: 32px;
+  height: 32px;
+}
+
+.safety-visual h3 {
+  color: #fff;
+  font-size: 22px;
+  margin-bottom: 16px;
+  position: relative;
+  z-index: 1;
+}
+
+.safety-visual p {
+  font-size: 15px;
+  line-height: 1.6;
+  color: rgba(255, 255, 255, 0.85);
+  position: relative;
+  z-index: 1;
+}
+
+.safety-points {
+  list-style: none;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.safety-point {
+  display: flex;
+  gap: 16px;
+  align-items: flex-start;
+}
+
+.safety-check {
+  width: 28px;
+  height: 28px;
+  border-radius: 50%;
+  background: var(--success-50);
+  color: var(--success-600);
+  display: grid;
+  place-items: center;
+  flex-shrink: 0;
+  margin-top: 2px;
+}
+
+.safety-check svg {
+  width: 16px;
+  height: 16px;
+}
+
+.safety-point h4 {
+  font-size: 17px;
+  font-weight: 700;
+  color: var(--neutral-900);
+  margin-bottom: 4px;
+}
+
+.safety-point p {
+  font-size: 15px;
+  color: var(--neutral-500);
+  line-height: 1.55;
+}
+
+@media (max-width: 920px) {
+  .safety-inner {
+    grid-template-columns: 1fr;
+    gap: 40px;
+  }
+  .safety-visual {
+    max-width: 460px;
+  }
+}
